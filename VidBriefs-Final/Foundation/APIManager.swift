@@ -16,10 +16,9 @@ struct APIManager {
     static var openai_apikey: String {
         keychain.get("openai-apikey") ?? ""
     }
-    //let openai_apikey = APIManager.openai_apikey
+    let openai_apikey = APIManager.openai_apikey
     
-    let openai_apikey = "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"
-    
+  
     
     
     // Structures
