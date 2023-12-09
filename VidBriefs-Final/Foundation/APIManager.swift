@@ -7,6 +7,8 @@
 
 import Foundation
 
+let openai_apikey = "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"
+
 
 struct APIManager {
     
@@ -109,7 +111,6 @@ struct APIManager {
     {
         let apiUrl = URL(string: "https://api.openai.com/v1/chat/completions")! // OpenAI API url
         let dispatchGroup = DispatchGroup()
-        let openai_apikey = "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"
         
         dispatchGroup.enter() // enter dispatch group
         
@@ -183,7 +184,7 @@ struct APIManager {
         let apiUrl = URL(string: "https://api.openai.com/v1/chat/completions")! // OpenAI API url
         var summaries: [String] = [] // Summary list created for each seperate summary
         let dispatchGroup = DispatchGroup() // Create a new DispatchGroup to manage a set of related, asynchronous tasks.
-        let openai_apikey = "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"
+        
         
 
         print("Before fetchGPTSummaries for loop")
