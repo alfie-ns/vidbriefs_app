@@ -6,11 +6,21 @@
 //
 
 import Foundation
+import KeychainSwift
 
-let openai_apikey = "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"
 
 
 struct APIManager {
+    
+    private static var keychain = KeychainSwift()
+    static var openai_apikey: String {
+        keychain.get("openai-apikey") ?? ""
+    }
+    //let openai_apikey = APIManager.openai_apikey
+    
+    let openai_apikey = "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"
+    
+    
     
     // Structures
     
@@ -53,6 +63,12 @@ struct APIManager {
     struct Snippet: Decodable {
         let videoId: String     // The unique identifier of the video associated with this snippet.
     }
+    
+    func retrieveOpenAIKey() -> String? {
+        return ProcessInfo.processInfo.environment["openai-apikey"]
+    }
+    
+    
 
     
     
