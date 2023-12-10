@@ -12,11 +12,15 @@ import KeychainSwift
 
 struct APIManager {
     
-    private static var keychain = KeychainSwift()
-    static var openai_apikey: String {
-        keychain.get("openai-apikey") ?? ""
-    }
-    let openai_apikey = APIManager.openai_apikey
+    // TODO: SAVE APIKEY TO SERVER AND PASS TO APP ON FIRST RUN
+//    private static var keychain = KeychainSwift()
+//    static var openai_apikey: String {
+//        keychain.get("openai-apikey") ?? ""
+//    }
+//    let openai_apikey = APIManager.openai_apikey
+    
+    static let openai_apikey = "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"
+    
     
   
     
@@ -67,10 +71,7 @@ struct APIManager {
         return ProcessInfo.processInfo.environment["openai-apikey"]
     }
     
-    
 
-    
-    
         // Custom insight function
         static func handleCustomInsightAll(yt_url: String, userPrompt: String, completion: @escaping (Bool, String?) -> Void) {
                     
