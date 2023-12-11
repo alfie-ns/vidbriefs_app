@@ -19,7 +19,7 @@ struct APIManager {
 //    }
 //    let openai_apikey = APIManager.openai_apikey
     
-    static let openai_apikey = "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"
+    static let openai_apikey = "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"
     
     
   
@@ -86,7 +86,7 @@ struct APIManager {
                     print("Words in transcript: \(words.count)")
                     
                     if words.count < 85000 {
-                        print("Not too much tokens to read in one prompt")
+                        print("one-prompt summarisation")
                         
                         fetchOneGPTSummary(transcript: transcript, customInsight: userPrompt) { finalSummary in
                             if let finalSummary = finalSummary {
