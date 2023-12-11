@@ -19,7 +19,7 @@ struct APIManager {
 //    }
 //    let openai_apikey = APIManager.openai_apikey
     
-    static let openai_apikey = "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"
+    static let openai_apikey = "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"
     
     
   
