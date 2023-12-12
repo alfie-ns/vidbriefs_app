@@ -99,6 +99,7 @@ struct APIManager {
 
                     }
                     else if words.count > 85000 {
+                        print("Chunk summarisation")
                         let chunks = breakIntoChunks(transcript: transcript) // Call breakIntoChunks and pass the transcript
                         fetchGPTSummaries(chunks: chunks, customInsight: userPrompt) { (finalSummary) in
                             if let finalSummary = finalSummary {
